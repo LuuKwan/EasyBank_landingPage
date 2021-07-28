@@ -1,0 +1,28 @@
+
+
+$break-point-up :(
+   "medium" : 40rem,
+   "large" : 64rem,
+   "xlarge" : 87.5rem
+);
+
+$break-point-down :(
+   "small" : 39.9375rem,
+   "medium" : 63.9375rem,
+   "large" : 87.4375rem
+);
+
+@mixin break-media-up($size) {
+   @media(min-width: map-get($break-point-up, $size)){
+      @content;
+   } 
+}
+
+
+@mixin break-media-down($size) {
+   @media(max-width: map-get($break-point-down, $size)){
+      @content;
+   } 
+}
+
+

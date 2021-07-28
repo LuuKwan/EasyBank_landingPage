@@ -1,0 +1,100 @@
+html{
+   font-size: 100%;
+   font-family: 'Public Sans', sans-serif;
+}
+
+*,*::after , *::before {
+ box-sizing: border-box;
+ padding: 0;
+ margin: 0;
+
+}
+h6, p{
+   color: $GrayishBlue;
+   font-weight: $font-weight-md;
+}
+
+h1,h2,h3,h4{
+   color: $DarkBlue;
+}
+
+// Flex box
+.flex{
+   display: flex;
+   &__jc--c{
+      justify-content: center;
+   }
+   &__jc--sb{
+      justify-content: space-between;
+   }
+   &__jc--se{
+      justify-content: s;
+   }
+
+   &__ai--c{
+      align-items:center;
+   }
+}
+
+
+// Container
+.container{
+   @include break-media-up(large){
+      margin-left: 10.3125rem;
+      margin-right: 10.3125rem;
+   }
+   &__px{
+      padding-left:  1.5rem;
+      padding-right: 1.5rem;
+      @include break-media-up(large){
+         padding-left:  1.5rem;
+         padding-right: 1.5rem;
+      }
+   }
+
+   &__pl{
+      padding-left: 1.5rem;
+      @include break-media-up(large){
+         padding: 0 10.3125rem;
+      }
+   }
+   &__pr{
+      padding-right: 1.5rem;
+      @include break-media-up(large){
+         padding: 0 10.3125rem;
+      }
+   }
+}
+
+//button
+
+button{
+   padding:  0.875rem 2.215rem;
+   border:none;
+   border-radius: 20px;
+   font-family: 'Public Sans', sans-serif;
+   font-size: 0.875rem;
+   font-weight: $font-weight-bold;
+   color: $White;
+   line-height: 1;
+   background:linear-gradient(171.8deg, #31d35c, #2bb7da);
+   
+   @include break-media-up(large){
+      display: inline-block;
+      background:linear-gradient(171.8deg, #31d35c, #2bb7da);
+      cursor: pointer;
+      transition: opacity 700ms,
+                  transform 500ms;
+      &:hover{
+         opacity: 0.9;
+         transform: scale(0.9);
+      }
+
+   }
+}
+
+
+
+
+
+
