@@ -1,0 +1,38 @@
+.example{
+   padding: 2rem;
+   h2{
+      color: red;
+   }
+   h3{
+      font-size: 20px;
+   }
+
+   @include break-media-up(large){
+      padding: 4rem;
+      h2{
+         color: aqua;
+      }
+      h3{
+         font-size: 30px;
+      }
+   }
+}
+
+.example{
+   padding: 2rem;
+   @include break-media-up(large){
+      padding: 4rem;
+   }
+   h2{
+      color: red;
+      @include break-media-up(large){
+         color: aqua;
+      }
+   }
+   h3{
+      font-size: 20px;
+      @include break-media-up(large){
+         font-size: 30px;
+      }
+   }
+}

@@ -16,23 +16,32 @@
    padding-top: 5.5rem;
    padding-bottom: 4rem;
    background-color: $LightGrayishBlue;
-
-   @include break-media-up(large){
+   @include break-media-up(medium){
       text-align: left;
+      padding: 1rem 0 0.5rem 0;
+   }
+   @include break-media-up(large){
       padding-top: 6rem;
       padding-bottom: 5.875rem;
    }
 
    .flex{
       flex-direction: column;
-
+      @include break-media-up(medium){
+         flex-direction: row;
+         flex-wrap: wrap;
+      }
       @include break-media-up(large){
+         flex-wrap: nowrap;
          flex-direction: row;
       }
    }
 
    .features__title{
       margin-bottom: 3.5rem;
+      @include break-media-up(medium){
+         margin-bottom: 1.5rem;
+      }
       @include break-media-up(large){
          text-align: left;
          width: 55%;
@@ -64,11 +73,19 @@
 
    .features__item{
       margin-bottom: 2rem;
+      @include break-media-up(medium){
+        width: 50%;
+        padding: 10px;
+        &:nth-child(1),&:nth-child(3){
+           padding-left: 0;
+        }
+      }
       @include break-media-up(large){
+         width: auto;
          margin: 0;
-         &:not(:last-child){
-            padding-right: 1rem;
-            
+         padding: 0 1rem 0 0;
+         &:last-child{
+            padding: 0;
          }
       }
       img{

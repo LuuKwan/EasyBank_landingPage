@@ -1,20 +1,31 @@
 .intro{
+   
    .container{
       position: relative;
       flex-direction: column;
       
-      @include break-media-up(large){
+      @include break-media-up(medium){
          flex-direction: row;
+
+         background: url("../images/bg-intro-desktop.svg");
+         background-position: center;
+         background-color: $DarkBlue;
          
+      }
+      @include break-media-up(large){
+         background: none;
       }
       .intro__image{
          
          width: calc(100% + 3rem);
          height: 17.3rem;
          position: relative;
+         @include break-media-up(medium){
+           height: 20.25rem;
+            order: 1;
+         }
          @include break-media-up(large){
             height: 39.25rem;
-            order: 1;
          }
          &::before{
             content: "";
@@ -25,6 +36,9 @@
             display: inherit;
             background-repeat: no-repeat;
             background-position: center;
+            @include break-media-up(medium){
+               background: none;
+            }
 
             @include break-media-up(large){
                background: url("../images/bg-intro-desktop.svg");
@@ -44,11 +58,19 @@
             background-repeat: no-repeat;
             background-size: 86.5%;
             background-position: right 50% bottom;
-
+            @include break-media-up(medium){
+               background-size: 88% 120%;
+               width: 150%;
+               height: 113%;
+               top: 0%;
+               max-width: 500px;
+               left: 3%
+            }
             @include break-media-up(large){
                height: 131%;
                top: -11%;
                width: 140%;
+               max-width: none;
                left: 14%;
                background-size: 90% 106%;
             }
@@ -60,8 +82,11 @@
          margin-top: 2.4375rem;
          margin-bottom: 5.5rem;
 
-         @include break-media-up(large){
+         @include break-media-up(medium){
+            margin: 0;
             text-align: left;
+         }
+         @include break-media-up(large){
             width: 86%;
          }
          
@@ -72,7 +97,12 @@
             letter-spacing: -0.71px;
             line-height: 1.2;
             margin-bottom: 1rem;
+            @include break-media-up(medium){
+               font-size: 2rem;
+               color: $White;
+            }
             @include break-media-up(large){
+               color: $DarkBlue;
                font-size: 3.5rem;
                letter-spacing: -1px;
                line-height: 127%;
@@ -86,6 +116,10 @@
             font-weight: $font-weight-light;
             line-height: 1.6;
             margin-bottom: 2rem;
+            @include break-media-up(medium){
+               font-size: 1rem;
+               color: $White;
+            }
             @include break-media-up(large){
                font-size: 1.125rem;
                font-weight: $font-weight-md;

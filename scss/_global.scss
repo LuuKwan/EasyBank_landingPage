@@ -78,19 +78,14 @@ button{
    color: $White;
    line-height: 1;
    background:linear-gradient(171.8deg, #31d35c, #2bb7da);
-   
-   @include break-media-up(large){
-      display: inline-block;
-      background:linear-gradient(171.8deg, #31d35c, #2bb7da);
-      cursor: pointer;
-      transition: opacity 700ms,
-                  transform 500ms;
-      &:hover{
-         opacity: 0.9;
-         transform: scale(0.9);
-      }
-
+   cursor: pointer;
+   transition: opacity 700ms,
+               transform 500ms;
+   &:hover{
+      opacity: 0.9;
+      transform: scale(0.9);
    }
+
 }
 
 

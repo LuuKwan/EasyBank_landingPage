@@ -1,15 +1,15 @@
 
 
 $break-point-up :(
-   "medium" : 40rem,
-   "large" : 64rem,
-   "xlarge" : 87.5rem
+   "medium" : 40rem, //640px
+   "large" : 64rem,  //1024px
+   "xlarge" : 87.5rem //1400px
 );
 
 $break-point-down :(
-   "small" : 39.9375rem,
-   "medium" : 63.9375rem,
-   "large" : 87.4375rem
+   "small" : 39.9375rem, // 639
+   "medium" : 63.9375rem,// 1023
+   "large" : 87.4375rem  // 1399
 );
 
 @mixin break-media-up($size) {
